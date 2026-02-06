@@ -1,0 +1,25 @@
+services:
+  cml-proxy:
+    image: mediocretriumph/cml-proxy:latest
+    container_name: cml-proxy
+    ports:
+      - "8080:8080"
+    environment:
+      - CML_PROXY_API_KEY=${CML_PROXY_API_KEY}
+    restart: unless-stopped
+    networks:
+      - cml-network
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    command: tunnel --no-autoupdate --url http://cml-proxy:8080
+    depends_on:
+      - cml-proxy
+    restart: unless-stopped
+    networks:
+      - cml-network
+
+networks:
+  cml-network:
+    driver: bridge
