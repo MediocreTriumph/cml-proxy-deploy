@@ -93,4 +93,4 @@ Then update cloudflared to use `host.docker.internal`:
 
 ## Support
 
-For issues with LabProof, visit [labproof.com](https://labproof.com).
+For issues with LabProof, contact labadmin@labproof.app
