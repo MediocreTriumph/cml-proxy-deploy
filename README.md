@@ -89,8 +89,6 @@ And update cloudflared to point to `host.docker.internal:8080` instead of `cml-p
 
 ## Support
 
-<<<<<<< HEAD
-For issues with LabProof, visit [labproof.app](https://labproof.app).
-=======
+This is a proof of concept and support is not currently offered.
 For issues with LabProof, contact labadmin@labproof.app
 >>>>>>> refs/remotes/origin/main
